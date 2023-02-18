@@ -19,6 +19,12 @@ You can install the program by running:
 ```sh
 go install github.com/henior2/wpkgtcli@latest
 ```
+You can also install the program from sources:
+```sh
+git clone https://github.com/henior2/wpkgtcli
+cd wpkgtcli
+go install .
+```
 
 # Running
 Execute the program with
