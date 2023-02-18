@@ -1,4 +1,4 @@
-module wpkg/wpkgtcli
+module henior2/wpkgtcli
 
 go 1.18
 
