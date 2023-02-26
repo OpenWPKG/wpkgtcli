@@ -111,7 +111,7 @@ func main() {
 	mOk("Config files saved")
 
 	addr := net.JoinHostPort(host, port)
-	mInfo("Connecting to", addr, "using TCP")
+	mInfo("Connecting to", addr, "using", ternary(secure, "TCP TLS", "TCP"))
 
 	var conn net.Conn
 	if secure {
