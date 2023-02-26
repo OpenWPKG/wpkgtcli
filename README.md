@@ -1,6 +1,6 @@
 # wpkgtcli
-![GitHub](https://img.shields.io/github/license/henior2/wpkgtcli)
-![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/henior2/wpkgtcli)
+![GitHub](https://img.shields.io/github/license/OpenWPKG/wpkgtcli)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/OpenWPKG/wpkgtcli)
 
 Open source terminal based WPKG Dashboard CLI written in Go
 
@@ -17,11 +17,11 @@ export PATH=$PATH:$GOPATH/bin
 
 You can install the program by running:
 ```sh
-go install github.com/henior2/wpkgtcli@latest
+go install github.com/OpenWPKG/wpkgtcli@latest
 ```
 You can also install the program from sources:
 ```sh
-git clone https://github.com/henior2/wpkgtcli
+git clone https://github.com/OpenWPKG/wpkgtcli
 cd wpkgtcli
 go install .
 ```
