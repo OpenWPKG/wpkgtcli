@@ -1,4 +1,4 @@
-module github.com/henior2/wpkgtcli
+module github.com/OpenWPKG/wpkgtcli
 
 go 1.18
 
