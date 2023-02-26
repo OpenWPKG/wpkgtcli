@@ -75,7 +75,7 @@ func main() {
 		} else {
 			chosenrecord, err = strconv.Atoi(_chosenrecord)
 			if err != nil {
-				mError(err.Error(), ". You are supposed to type a number smaller than", len(iplist), "or 'new'")
+				mError(err.Error() + ". You are supposed to type a number smaller than", len(iplist), "or 'new'")
 				continue
 			}
 			if chosenrecord > len(iplist) {
@@ -91,7 +91,6 @@ func main() {
 	port := input("Enter port", fmt.Sprint(iplist[chosenrecord].Port))
 	secure := strings.ToLower(input("Secured? y/n", fmt.Sprint(ternary(iplist[chosenrecord].Secured, "yes", "no"))))[0] == 'y'
 	password := input_p("Enter password (or 'no' for nologin)", fmt.Sprint(ternary(_password == "", "no", _password)))
-	mDebug(password)
 	if password == "no" {
 		mInfo("/registeradmin will not be executed")
 	}
@@ -180,15 +179,16 @@ func main() {
 			continue
 		}
 
-		line := strings.Split(_in, "\n")[0]
+		line := strings.Trim(_in, NEWLINE)
 		message := []byte(line)
-		// mDebug(len(message), ";", message)
+		mDebug(len(message), ";", message)
 
 		if line == ":q" {
 			break
 		}
 
-		fmt.Println(string(send(message, conn)))
+		response := string(send(message, conn))
+		fmt.Println(strings.Trim(response, "\x00"))
 	}
 	mInfo("Exitting")
 }
