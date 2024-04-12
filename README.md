@@ -1,3 +1,6 @@
+# 🌅 Sunset
+As of April 2024 I am officially sunsetting this project, even though it's not compatible with WPKG 2 and WPKG 3 since like a year.
+
 # wpkgtcli
 ![GitHub](https://img.shields.io/github/license/OpenWPKG/wpkgtcli)
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/OpenWPKG/wpkgtcli)
